@@ -1,0 +1,8 @@
+cat > .gitignore << 'EOF'
+app
+*.o
+.vs/
+Debug/
+Release/
+x64/
+EOF
