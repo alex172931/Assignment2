@@ -20,11 +20,18 @@ int main() {
         STUDENT_DATA student;
         stringstream ss(line);
 
-        getline(ss, student.firstName, ',');
         getline(ss, student.lastName, ',');
+        ss >> ws;
+        getline(ss, student.firstName, ',');
 
         students.push_back(student);
     }
+
+#ifdef _DEBUG
+    for (const STUDENT_DATA& student : students) {
+        cout << student.firstName << " " << student.lastName << endl;
+    }
+#endif
 
     return 1;
 }
